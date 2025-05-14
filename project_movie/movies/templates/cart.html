@@ -1,0 +1,7 @@
+<h1>Ваша корзина</h1>
+<ul>
+  {% for product, quantity in cart_items %}
+    <li>{{ product.name }} — {{ quantity }} шт — {{ product.price }} сом за штуку</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'product_list' %}">Назад к покупкам</a>
